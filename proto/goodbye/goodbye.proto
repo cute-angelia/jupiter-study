@@ -1,0 +1,20 @@
+syntax = "proto3";
+package goodbye;
+
+option go_package = "proto/goodbye";
+
+// The greeting service definition.
+service GoodBye {
+  // Sends a greeting
+  rpc SayGoodBye (SayGoodByeReq) returns (SayGoodByeResp) {}
+}
+
+// The request message containing the user's name.
+message SayGoodByeReq {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message SayGoodByeResp {
+  string message = 1;
+}
