@@ -1,0 +1,10 @@
+[server.grpc]
+    debug = true
+    port = 0
+    enableAccessInterceptorReq = true
+    enableAccessInterceptorRes = true
+[etcd]
+    addrs=["127.0.0.1:2379"]
+[registry]
+    connectTimeout = "1s"
+    secure = false
