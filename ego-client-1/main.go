@@ -7,10 +7,11 @@ import (
 	"github.com/gotomicro/ego-component/eetcd/examples/helloworld"
 	"github.com/gotomicro/ego-component/eetcd/registry"
 	"github.com/gotomicro/ego/client/egrpc"
-	"github.com/gotomicro/ego/client/egrpc/resolver"
 	"github.com/gotomicro/ego/core/elog"
+	"log"
 )
 
+// export EGO_DEBUG=true
 func main() {
 	if err := ego.New().Invoker(
 		invokerGrpc,
@@ -23,22 +24,23 @@ func main() {
 var grpcComp helloworld.GreeterClient
 
 func invokerGrpc() error {
-	EtcdClient := eetcd.Load("etcd").Build()
-	EtcdRegistry := registry.Load("registry").Build(registry.WithClientEtcd(EtcdClient))
-	// 必须注册在grpc前面
-	resolver.Register("etcd", EtcdRegistry)
+	registry.Load("registry").Build(registry.WithClientEtcd(eetcd.Load("etcd").Build()))
 	grpcConn := egrpc.Load("grpc.test").Build()
 	grpcComp = helloworld.NewGreeterClient(grpcConn.ClientConn)
 	return nil
 }
 
 func callGrpc() error {
+	log.Println("-------1")
 	_, err := grpcComp.SayHello(context.Background(), &helloworld.HelloRequest{
 		Name: "i am client",
 	})
+	log.Println("-------2")
 	if err != nil {
+		log.Println("-------4")
 		return err
 	}
+	log.Println("-------3")
 
 	_, err = grpcComp.SayHello(context.Background(), &helloworld.HelloRequest{
 		Name: "error2",

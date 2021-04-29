@@ -1,100 +1,94 @@
-2021-02-22 14:47:56	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 14:47:56	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 14:47:56	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 14:47:56	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 14:47:56	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 14:47:59	[31mPANIC[0m	dial grpc server                	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///main", "errKind": "request err", "error": "context deadline exceeded"}
-github.com/gotomicro/ego/core/elog.(*Component).Panic
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/core/elog/component.go:382
-github.com/gotomicro/ego/client/egrpc.newComponent
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/component.go:47
-github.com/gotomicro/ego/client/egrpc.(*Container).Build
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/container.go:70
-main.invokerGrpc
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:23
-github.com/gotomicro/ego.runSerialFuncReturnError
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego_function.go:215
-github.com/gotomicro/ego.(*ego).Invoker
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego.go:119
-main.main
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:12
-runtime.main
-	/Users/vanilla/.gvm/gos/go1.14/src/runtime/proc.go:203
-2021-02-22 14:56:18	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 14:56:18	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 14:56:18	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 14:56:18	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 14:56:18	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 14:56:18	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 14:56:18	[32mINFO[0m	start grpc client               	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///main", "name": "grpc.test"}
-2021-02-22 14:56:18	[31mERROR[0m	access                          	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///main", "type": "unary", "code": 14, "desc": "error", "method": "/helloworld.Greeter/SayHello", "cost": 0.538, "name": "etcd:///main", "event": "error"}
-2021-02-22 14:58:42	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 14:58:42	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 14:58:42	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 14:58:42	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 14:58:42	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 14:58:42	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 14:58:42	[32mINFO[0m	start grpc client               	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///main", "name": "grpc.test"}
-2021-02-22 14:58:42	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
-2021-02-22 15:06:42	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 15:06:42	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 15:06:42	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 15:06:42	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 15:06:42	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 15:06:42	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 15:06:45	[31mPANIC[0m	dial grpc server                	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///main", "errKind": "request err", "error": "context deadline exceeded"}
-github.com/gotomicro/ego/core/elog.(*Component).Panic
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/core/elog/component.go:382
-github.com/gotomicro/ego/client/egrpc.newComponent
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/component.go:47
-github.com/gotomicro/ego/client/egrpc.(*Container).Build
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/container.go:70
-main.invokerGrpc
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:30
-github.com/gotomicro/ego.runSerialFuncReturnError
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego_function.go:215
-github.com/gotomicro/ego.(*ego).Invoker
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego.go:119
-main.main
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:15
-runtime.main
-	/Users/vanilla/.gvm/gos/go1.14/src/runtime/proc.go:203
-2021-02-22 15:06:56	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 15:06:56	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 15:06:56	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 15:06:56	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 15:06:56	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 15:06:56	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 15:06:56	[32mINFO[0m	start grpc client               	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///ego-server-1", "name": "grpc.test"}
-2021-02-22 15:06:56	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
-2021-02-22 15:51:50	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 15:51:50	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 15:51:50	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 15:51:50	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 15:51:50	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 15:51:50	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 15:51:53	[31mPANIC[0m	dial grpc server                	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///ego-server-1", "errKind": "request err", "error": "context deadline exceeded"}
-github.com/gotomicro/ego/core/elog.(*Component).Panic
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/core/elog/component.go:382
-github.com/gotomicro/ego/client/egrpc.newComponent
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/component.go:47
-github.com/gotomicro/ego/client/egrpc.(*Container).Build
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/client/egrpc/container.go:70
-main.invokerGrpc
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:30
-github.com/gotomicro/ego.runSerialFuncReturnError
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego_function.go:215
-github.com/gotomicro/ego.(*ego).Invoker
-	/Users/vanilla/.gvm/pkgsets/go1.14/global/pkg/mod/github.com/gotomicro/ego@v0.3.8/ego.go:119
-main.main
-	/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:15
-runtime.main
-	/Users/vanilla/.gvm/gos/go1.14/src/runtime/proc.go:203
-2021-02-22 16:01:38	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
-2021-02-22 16:01:38	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
-2021-02-22 16:01:38	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
-2021-02-22 16:01:38	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
-2021-02-22 16:01:38	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
-2021-02-22 16:01:38	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
-2021-02-22 16:01:38	[32mINFO[0m	start grpc client               	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///ego-server-1", "name": "grpc.test"}
-2021-02-22 16:01:38	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+{"lv":"info","ts":1619600206,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619600206,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"panic","ts":1619600206,"msg":"data source: provider error","comp":"core.econf","error":"invalid data source, please make sure the scheme has been registered","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/core/elog/component.go:404\ngithub.com/gotomicro/ego.loadConfig\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/ego_function.go:151\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/ego_function.go:229\ngithub.com/gotomicro/ego.New\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/ego.go:110\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:15\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619600238,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619600238,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619600238,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619600238,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619600238,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619600238,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619600238,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619600241,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/core/elog/component.go:404\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/client/egrpc/container.go:75\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:30\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/src/github.com/cute-angelia/ego/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:15\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619601445,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619601445,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619601445,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619601445,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619601445,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619601445,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619601445,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619601448,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","name":"grpc.test","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/container.go:76\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:26\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619602516,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619602516,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619602516,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619602516,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619602516,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619602516,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619602516,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619602519,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","name":"grpc.test","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/container.go:76\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:26\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619602572,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619602572,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619602572,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619602572,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619602572,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619602572,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619602572,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619602575,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","name":"grpc.test","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/container.go:76\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:26\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619659262,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619659262,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619659262,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619659262,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619659262,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619659262,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"panic","ts":1619659267,"msg":"client etcd start panic","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]","error":"context deadline exceeded","value":{"endpoints":["127.0.0.1:2379"],"certFile":"","keyFile":"","caCert":"","basicAuth":false,"userName":"","connectTimeout":5000000000,"secure":false,"autoAsyncInterval":0,"TTL":0},"stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego-component/eetcd.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego-component/eetcd@v0.1.4/component.go:96\ngithub.com/gotomicro/ego-component/eetcd.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego-component/eetcd@v0.1.4/container.go:39\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:25\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619659589,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619659589,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619659589,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619659589,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619659589,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619659589,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619659589,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619659592,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","name":"grpc.test","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/container.go:76\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:26\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619659688,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619659688,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619659688,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619659688,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619659688,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619659688,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619659688,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"panic","ts":1619659691,"msg":"dial grpc server","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","errKind":"request err","name":"grpc.test","error":"context deadline exceeded","stack":"github.com/gotomicro/ego/core/elog.(*Component).Panic\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/core/elog/component.go:398\ngithub.com/gotomicro/ego/client/egrpc.newComponent\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/component.go:51\ngithub.com/gotomicro/ego/client/egrpc.(*Container).Build\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/client/egrpc/container.go:76\nmain.invokerGrpc\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:26\ngithub.com/gotomicro/ego.runSerialFuncReturnError\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego_function.go:229\ngithub.com/gotomicro/ego.(*Ego).Invoker\n\t/Users/vanilla/gopath/pkg/mod/github.com/gotomicro/ego@v0.5.4/ego.go:122\nmain.main\n\t/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/main.go:14\nruntime.main\n\t/Users/vanilla/.gvm/gos/go1.16/src/runtime/proc.go:225"}
+{"lv":"info","ts":1619661547,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619661547,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619661547,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619661547,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619661547,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619661547,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619661547,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"info","ts":1619661547,"msg":"start grpc client","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","name":"grpc.test"}
+{"lv":"info","ts":1619661547,"msg":"stop Ego, bye!","comp":"app"}
+{"lv":"info","ts":1619661638,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619661638,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619661638,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619661638,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619661638,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619661638,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619661638,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"info","ts":1619661638,"msg":"start grpc client","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","name":"grpc.test"}
+{"lv":"info","ts":1619661638,"msg":"stop Ego, bye!","comp":"app"}
+{"lv":"info","ts":1619661790,"msg":"init default logger","comp":"core.elog"}
+{"lv":"info","ts":1619661790,"msg":"init Ego logger","comp":"core.elog"}
+{"lv":"info","ts":1619661790,"msg":"read watch","comp":"core.econf","comp":"file datasource","configFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","realConfigFile":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml","dir":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1","fppath":"/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+{"lv":"info","ts":1619661790,"msg":"init config","comp":"core.econf","addr":"config.toml"}
+{"lv":"info","ts":1619661790,"msg":"init max procs","comp":"app","value":4}
+{"lv":"warn","ts":1619661790,"msg":"not init trace","value":"need trace config: [trace.jaeger] in config","comp":"app"}
+{"lv":"info","ts":1619661790,"msg":"dial etcd server","comp":"component.eetcd","compName":"etcd","addr":"[127.0.0.1:2379]"}
+{"lv":"info","ts":1619661790,"msg":"start grpc client","comp":"client.egrpc","compName":"grpc.test","addr":"etcd:///ego-server-1","name":"grpc.test"}
+{"lv":"info","ts":1619661790,"msg":"stop Ego, bye!","comp":"app"}
+2021-04-29 10:03:48	[32mINFO[0m	ego@v0.5.4/ego_function.go:204	init default logger             	{"comp": "core.elog"}
+2021-04-29 10:03:48	[32mINFO[0m	ego@v0.5.4/ego_function.go:205	init Ego logger                 	{"comp": "core.elog"}
+2021-04-29 10:03:48	[32mINFO[0m	file/file.go:94	read watch                      	{"comp": "core.econf", "comp": "file datasource", "configFile": "/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml", "realConfigFile": "/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml", "dir": "/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1", "fppath": "/Users/vanilla/git/lite-game/src/jupiter-study/ego-client-1/config.toml"}
+2021-04-29 10:03:48	[32mINFO[0m	ego@v0.5.4/ego_function.go:158	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-04-29 10:03:48	[32mINFO[0m	ego@v0.5.4/ego_function.go:199	init max procs                  	{"comp": "app", "value": 4}
+2021-04-29 10:03:48	[33mWARN[0m	ego@v0.5.4/ego_function.go:185	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-04-29 10:03:48	[32mINFO[0m	eetcd@v0.1.5-0.20210426123938-3b4277615e9a/component.go:106	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-04-29 10:03:48	[32mINFO[0m	egrpc/component.go:56	start grpc client               	{"comp": "client.egrpc", "compName": "grpc.test", "addr": "etcd:///ego-server-1", "name": "grpc.test"}
+2021-04-29 10:03:48	[32mINFO[0m	ego@v0.5.4/ego.go:211	stop Ego, bye!                  	{"comp": "app"}

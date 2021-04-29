@@ -1,0 +1,116 @@
+2021-02-22 14:44:27	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 14:44:27	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 14:44:27	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 14:44:27	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 14:44:27	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 14:44:27	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:53887"}
+2021-02-22 14:50:53	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:53887"}
+2021-02-22 14:50:53	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 14:55:39	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 14:55:39	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 14:55:39	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 14:55:39	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 14:55:39	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 14:55:39	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 14:55:39	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:54137", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:54137\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 14:55:39\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 14:55:39	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:54137"}
+2021-02-22 14:56:18	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.04, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"i am client"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:54137"}}
+2021-02-22 14:56:18	[31mERROR[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.065, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"error"}, "res": null, "error": "rpc error: code = Unavailable desc = error"}
+2021-02-22 14:58:42	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.035, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"i am client"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:54137"}}
+2021-02-22 14:58:42	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.081, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"error2"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:54137"}}
+2021-02-22 15:05:55	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:54137"}
+2021-02-22 15:05:55	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:06:20	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:06:20	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:06:20	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:06:20	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:06:20	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:06:20	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:06:20	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/ego-server-1/providers/grpc://0.0.0.0:54288", "value": "{\"name\":\"ego-server-1\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:54288\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:06:20\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:06:20	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:54288"}
+2021-02-22 15:06:56	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.036, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"i am client"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:54288"}}
+2021-02-22 15:06:56	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.068, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"error2"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:54288"}}
+2021-02-22 15:51:26	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:54288"}
+2021-02-22 15:51:26	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:51:45	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:51:45	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:51:45	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:51:45	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:51:45	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:51:45	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:51:45	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56044", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56044\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:51:45\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:51:45	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56044"}
+2021-02-22 15:52:23	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56044"}
+2021-02-22 15:52:23	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:52:26	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:52:26	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:52:26	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:52:26	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:52:26	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:52:26	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:52:26	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56066", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56066\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:52:26\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:52:26	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56066"}
+2021-02-22 15:54:39	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56066"}
+2021-02-22 15:54:39	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:54:51	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:54:51	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:54:51	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:54:51	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:54:51	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:54:51	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:54:51	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56126", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56126\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:54:51\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:54:51	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56126"}
+2021-02-22 15:55:30	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56126"}
+2021-02-22 15:55:30	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:55:33	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:55:33	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:55:33	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:55:33	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:55:33	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:55:33	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:55:33	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56141", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56141\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:55:33\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:55:33	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56141"}
+2021-02-22 15:57:44	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56141"}
+2021-02-22 15:57:44	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:57:50	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:57:50	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:57:50	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:57:50	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:57:50	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:57:50	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:57:50	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56170", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56170\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:57:50\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:57:50	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56170"}
+2021-02-22 15:58:18	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56170"}
+2021-02-22 15:58:18	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:58:21	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:58:21	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:58:21	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:58:21	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:58:21	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:58:21	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:58:21	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56175", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56175\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:58:21\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:58:21	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56175"}
+2021-02-22 15:58:25	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56175"}
+2021-02-22 15:58:25	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 15:59:36	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 15:59:36	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 15:59:36	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 15:59:36	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 15:59:36	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 15:59:36	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 15:59:36	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/main/providers/grpc://0.0.0.0:56203", "value": "{\"name\":\"main\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56203\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 15:59:36\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 15:59:36	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56203"}
+2021-02-22 16:01:00	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56203"}
+2021-02-22 16:01:00	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}
+2021-02-22 16:01:30	[32mINFO[0m	init default logger             	{"comp": "core.elog"}
+2021-02-22 16:01:30	[32mINFO[0m	init ego logger                 	{"comp": "core.elog"}
+2021-02-22 16:01:30	[32mINFO[0m	init config                     	{"comp": "core.econf", "addr": "config.toml"}
+2021-02-22 16:01:30	[32mINFO[0m	init max procs                  	{"comp": "app", "value": 4}
+2021-02-22 16:01:30	[33mWARN[0m	not init trace                  	{"value": "need trace config: [trace.jaeger] in config", "comp": "app"}
+2021-02-22 16:01:30	[32mINFO[0m	dial etcd server                	{"comp": "component.eetcd", "compName": "etcd", "addr": "[127.0.0.1:2379]"}
+2021-02-22 16:01:30	[32mINFO[0m	register service                	{"comp": "component.eetcd", "compName": "registry", "addr": "[127.0.0.1:2379]", "key": "/ego/ego-server-1/providers/grpc://0.0.0.0:56247", "value": "{\"name\":\"ego-server-1\",\"scheme\":\"grpc\",\"address\":\"0.0.0.0:56247\",\"weight\":100,\"enable\":true,\"healthy\":true,\"metadata\":{\"appHost\":\"\",\"appMode\":\"\",\"appVersion\":\"\",\"buildTime\":\"\",\"egoVersion\":\"v0.3.8\",\"startTime\":\"2021-02-22 16:01:30\"},\"region\":\"\",\"zone\":\"\",\"kind\":1,\"deployment\":\"\",\"group\":\"\",\"services\":null}"}
+2021-02-22 16:01:30	[32mINFO[0m	start server                    	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56247"}
+2021-02-22 16:01:38	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.034, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"i am client"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:56247"}}
+2021-02-22 16:01:38	[32mINFO[0m	access                          	{"comp": "server.egrpc", "compName": "server.grpc", "type": "unary", "event": "normal", "method": "/helloworld.Greeter/SayHello", "cost": 0.107, "peerName": "main", "peerIp": "127.0.0.1", "req": {"name":"error2"}, "res": {"message":"Hello EGO, I'm 0.0.0.0:56247"}}
+2021-02-22 16:01:42	[32mINFO[0m	stop server                     	{"comp": "server.egrpc", "compName": "server.grpc", "addr": "grpc://0.0.0.0:56247"}
+2021-02-22 16:01:42	[32mINFO[0m	stop ego, bye!                  	{"comp": "app"}

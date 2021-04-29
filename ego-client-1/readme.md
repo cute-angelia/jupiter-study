@@ -1,0 +1,1 @@
+go get github.com/gotomicro/ego-component/eetcd@master

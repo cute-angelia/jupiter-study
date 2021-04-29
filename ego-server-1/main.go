@@ -15,32 +15,33 @@ import (
 	"os"
 )
 
+var (
+	EtcdClient   *eetcd.Component
+	EtcdRegistry *registry.Component
+)
+
 func init() {
-	os.Setenv("EGO_NAME", "ego-server-1")
+	if err := os.Setenv("EGO_NAME", "ego-server-1"); err != nil {
+		log.Println(err)
+	}
 	os.Setenv("EGO_DEBUG", "true")
 }
 
-//  export EGO_DEBUG=true && go run main.go --config=config.toml
+// export EGO_NAME=ego-server-1
+// export EGO_DEBUG=true && go run main.go --config=config.toml
 func main() {
 	if err := ego.New().
 		Invoker(invoker).
 		Registry(EtcdRegistry).
 		Serve(func() server.Server {
 			server := egrpc.Load("server.grpc").Build()
-
 			log.Println(os.Getenv("EGO_NAME"))
-
 			helloworld.RegisterGreeterServer(server.Server, &Greeter{server: server})
 			return server
 		}()).Run(); err != nil {
 		elog.Panic("startup", elog.Any("err", err))
 	}
 }
-
-var (
-	EtcdClient   *eetcd.Component
-	EtcdRegistry *registry.Component
-)
 
 func invoker() error {
 	EtcdClient = eetcd.Load("etcd").Build()
